@@ -369,9 +369,8 @@ const Assessment = () => {
             window.location.href = '/reports';
         } catch (error) {
             console.error("Error generating report:", error);
-            alert("Failed to generate report. Server might be offline. Saving locally as backup.");
+            // Silent fallback to local storage
 
-            // Fallback to local storage
             const assessmentData = {
                 id: Date.now(),
                 projectName,
