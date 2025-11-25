@@ -1,0 +1,34 @@
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
+    margin-top: auto;
+    background-color: var(--bg-primary);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.logo-icon-sm {
+    background-color: var(--accent-green);
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-copyright {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}

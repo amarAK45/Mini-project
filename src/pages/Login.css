@@ -1,0 +1,471 @@
+.login-page {
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 800px;
+    background-color: var(--bg-primary);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+/* Left Panel */
+.login-left {
+    flex: 1;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-header {
+    margin-bottom: 3rem;
+}
+
+.login-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.auth-content {
+    flex: 1;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.auth-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.auth-icon-circle {
+    width: 48px;
+    height: 48px;
+    background-color: var(--accent-green);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.water-drop-icon {
+    font-size: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.auth-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.auth-toggle {
+    display: flex;
+    background-color: var(--bg-secondary);
+    padding: 4px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 0.75rem;
+    background: transparent;
+    color: var(--text-secondary);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.toggle-btn.active {
+    background-color: var(--bg-primary);
+    /* Or lighter grey */
+    color: var(--text-primary);
+    /* border: 1px solid var(--border-color); */
+    /* Optional based on look */
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.required {
+    color: #ef4444;
+}
+
+.form-group input,
+.form-group select {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--accent-green);
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-input input {
+    width: 100%;
+    padding-right: 2.5rem;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    color: var(--text-muted);
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: var(--accent-green);
+    font-size: 0.85rem;
+}
+
+.submit-btn {
+    background-color: var(--bg-secondary);
+    /* Default state looks dark in screenshot */
+    color: var(--text-primary);
+    padding: 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: all 0.2s;
+    border: 1px solid var(--border-color);
+}
+
+.submit-btn:hover {
+    background-color: var(--bg-primary);
+    border-color: var(--text-secondary);
+}
+
+.demo-text {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.divider span {
+    padding: 0 1rem;
+}
+
+.social-login {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.social-btn:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.sso-notice {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.sso-text strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.login-footer-links {
+    margin-top: auto;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.link-green {
+    color: var(--accent-green);
+}
+
+.legal-links a {
+    color: var(--text-muted);
+    margin: 0 0.5rem;
+}
+
+/* Right Panel */
+.login-right {
+    flex: 1;
+    background-color: var(--bg-primary);
+    /* Same bg, but maybe padding/layout differs */
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.info-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.card-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(46, 125, 50, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.card-header p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.check-list {
+    list-style: none;
+}
+
+.check-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.check-icon {
+    color: var(--accent-green);
+    flex-shrink: 0;
+}
+
+/* Security Card Specifics */
+.security-verification {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.security-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.security-code-box {
+    background-color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.security-code {
+    font-family: monospace;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: 700;
+}
+
+.security-label {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.security-item {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.sec-icon {
+    color: var(--accent-green);
+    margin-top: 2px;
+}
+
+.security-item h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.security-item p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.security-footer {
+    display: flex;
+    gap: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.security-footer span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.stats-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin-top: 1rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-green);
+    margin-bottom: 0.25rem;
+}
+
+.stat-item p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.green-text {
+    color: var(--accent-green);
+}

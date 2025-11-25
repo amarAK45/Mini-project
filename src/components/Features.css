@@ -1,0 +1,85 @@
+.features {
+    padding: 4rem 0;
+}
+
+.pill-badge-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--accent-green);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.feature-card {
+    background-color: var(--bg-primary);
+    /* Or very dark grey */
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: transform 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card:hover {
+    border-color: var(--accent-green);
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    color: var(--accent-green);
+    margin-bottom: 1.5rem;
+}
+
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.feature-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.feature-points {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.feature-points li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.check-icon {
+    color: var(--accent-green);
+    font-weight: bold;
+}
+
+.explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-top: auto;
+    transition: gap 0.2s;
+}
+
+.explore-link:hover {
+    gap: 0.75rem;
+    color: var(--accent-green);
+}

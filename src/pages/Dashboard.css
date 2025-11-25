@@ -1,0 +1,31 @@
+.dashboard-page {
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding-bottom: 4rem;
+}
+
+.dashboard-header {
+    background: white;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    gap: 1rem;
+}
+
+.new-assessment-btn {
+    width: 100%;
+    justify-content: center;
+}
+}

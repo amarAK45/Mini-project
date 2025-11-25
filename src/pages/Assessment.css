@@ -1,0 +1,794 @@
+.assessment-page {
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+    padding-bottom: 4rem;
+}
+
+/* Workflow Header */
+.workflow-header {
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+}
+
+.workflow-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.workflow-top h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.step-indicator {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.workflow-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.5;
+}
+
+.step-item.active {
+    opacity: 1;
+}
+
+.step-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+}
+
+.step-item.active .step-icon {
+    background-color: var(--accent-green);
+    border-color: var(--accent-green);
+    color: white;
+}
+
+.step-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.step-text strong {
+    font-size: 0.9rem;
+}
+
+.step-text span {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.step-line {
+    flex: 1;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 0 2rem;
+}
+
+/* Assessment Content */
+.assessment-tool-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tool-icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(46, 125, 50, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.assessment-tool-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.assessment-tool-header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Progress Section */
+.progress-section {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.progress-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.progress-header span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.progress-bar-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.progress-track {
+    height: 6px;
+    background-color: var(--bg-primary);
+    border-radius: 3px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--accent-green);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.progress-steps-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.indicator-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.5;
+}
+
+.indicator-item.active {
+    opacity: 1;
+}
+
+.indicator-dot {
+    width: 24px;
+    height: 24px;
+    background-color: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+}
+
+.indicator-item.active .indicator-dot {
+    border-color: var(--accent-green);
+    background-color: rgba(46, 125, 50, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indicator-item.active .indicator-dot::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-green);
+    border-radius: 50%;
+}
+
+.indicator-item span {
+    font-size: 0.75rem;
+}
+
+.indicator-line {
+    flex: 1;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 0 1rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Grid Layout */
+.assessment-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 2rem;
+}
+
+/* Form Panel */
+.form-panel {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.panel-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.panel-icon {
+    color: var(--accent-green);
+    margin-top: 4px;
+}
+
+.panel-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.panel-header p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.help-text {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+/* Custom Select */
+.custom-select {
+    position: relative;
+}
+
+.select-trigger {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-top: 4px;
+    z-index: 10;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.search-box {
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    width: 100%;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.options-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.option-item {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.option-item:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* Guidelines */
+.guidelines-box {
+    background-color: rgba(46, 125, 50, 0.05);
+    border: 1px solid rgba(46, 125, 50, 0.2);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.guidelines-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-green);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.guidelines-box ul {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.guidelines-box li {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.guidelines-box li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent-green);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-prev,
+.btn-next {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.btn-prev {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.btn-next {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-next:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* Calculations Panel */
+.calculations-panel {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    height: fit-content;
+}
+
+.calc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.calc-title {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.calc-icon {
+    color: var(--accent-green);
+    margin-top: 2px;
+}
+
+.calc-title h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.calc-title p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.recalc-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.metric-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.metric-sub {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.metric-value.error {
+    color: #ef4444;
+}
+
+.metric-sub.error {
+    color: #ef4444;
+}
+
+.metric-value.success {
+    color: var(--accent-green);
+}
+
+.recommendations-box {
+    border-top: 1px solid var(--border-color);
+    padding-top: 1.5rem;
+}
+
+.rec-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-green);
+    margin-bottom: 0.75rem;
+}
+
+.recommendations-box ul {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.recommendations-box li {
+    position: relative;
+    padding-left: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.recommendations-box li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--text-secondary);
+}
+
+/* Upload Area Styles */
+.upload-group {
+    margin-bottom: 2rem;
+}
+
+.image-upload-area {
+    border: 2px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.image-upload-area:hover {
+    border-color: var(--accent-green);
+    background: rgba(46, 125, 50, 0.05);
+}
+
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    gap: 1rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.upload-label span {
+    font-size: 0.9rem;
+}
+
+.analyzing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--accent-green);
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.uploaded-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.uploaded-preview img {
+    max-width: 100%;
+    max-height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.upload-success {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-green);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Roof Metrics Grid */
+.roof-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.roof-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rm-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.rm-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Rainfall Data Styles */
+.loading-rainfall {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: rgba(46, 125, 50, 0.1);
+    border: 1px solid rgba(46, 125, 50, 0.2);
+    border-radius: 8px;
+    color: var(--accent-green);
+    font-size: 0.9rem;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--accent-green);
+    margin-bottom: 1rem;
+}
+
+.monthly-rainfall-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.month-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.month-input label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.month-input input {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 6px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.month-input input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.rainfall-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(46, 125, 50, 0.05);
+    border: 1px solid rgba(46, 125, 50, 0.2);
+    border-radius: 8px;
+}
+
+.rainfall-metric-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.rainfall-metric-item .metric-icon {
+    font-size: 1.5rem;
+}
+
+.rainfall-metric-item .metric-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.rainfall-metric-item .metric-value {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+
+/* Checkbox Group Styles */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    padding: 0.75rem;
+    background: var(--surface-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.checkbox-label:hover {
+    border-color: var(--primary-color);
+    background: rgba(46, 125, 50, 0.05);
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 0.25rem;
+    accent-color: var(--primary-color);
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.checkbox-label span {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .assessment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow-steps {
+        display: none;
+    }
+
+    .roof-metrics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .monthly-rainfall-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rainfall-metrics {
+        grid-template-columns: 1fr;
+    }
+}
