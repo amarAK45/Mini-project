@@ -30,7 +30,7 @@ const Navbar = () => {
                     <div className="logo-icon">
                         <LayoutDashboard size={20} color="white" />
                     </div>
-                    <span>RainHarvest</span>
+                    <span>JalNetra</span>
                 </Link>
 
                 <div className="nav-links">

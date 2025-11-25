@@ -87,7 +87,7 @@ const Login = () => {
                             <div className="logo-icon-md">
                                 <LayoutDashboard size={24} color="white" />
                             </div>
-                            <span>RainHarvest</span>
+                            <span>JalNetra</span>
                         </Link>
                     </div>
 
@@ -98,7 +98,7 @@ const Login = () => {
                             </div>
                         </div>
 
-                        <h1 className="auth-title">Welcome to RainHarvest</h1>
+                        <h1 className="auth-title">Welcome to JalNetra</h1>
                         <p className="auth-subtitle">
                             {isLogin ? "Sign in to access your environmental assessment tools" : "Create your account to start conducting assessments"}
                         </p>

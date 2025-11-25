@@ -261,6 +261,13 @@ const Assessment = () => {
         calculateMetrics();
     }, [siteArea, selectedCity, buildingType, roofLength, roofWidth, roofMaterial, annualRainfall]);
 
+    // Auto-fetch rainfall data when city changes
+    useEffect(() => {
+        if (selectedCity && cityCoordinates[selectedCity]) {
+            fetchRainfallData(selectedCity);
+        }
+    }, [selectedCity]);
+
     const calculateMetrics = () => {
         // Use fetched rainfall or fallback
         const rainfall = parseFloat(annualRainfall) || 1000;
